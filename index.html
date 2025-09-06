@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="title">Macael Piedra — Alero Azul y Plata · Canto Rodado de Mármol Blanco</title>
+  <meta name="description" data-i18n="meta_desc" content="Piedra irregular (alero) Azul y Plata y canto rodado de mármol blanco. Catálogo, proyectos, comparativa técnica y contacto. Origen Macael (Almería)." />
+  <meta name="theme-color" content="#0c1323" />
+  <style>
+    :root{--bg:#0c1323;--bg2:#0f172a;--line:#172036;--text:#e5e7eb;--muted:#9aa6bd;--lead:#cbd5e1;--brand:#60a5fa;--brand2:#38bdf8;--accent:#a78bfa;--ok:#22c55e;--radius:16px;--shadow:0 8px 40px rgba(0,0,0,.3)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial}
+    a{color:inherit}
+    .container{max-width:1200px;margin:auto;padding:0 24px}
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:rgba(12,19,35,.75);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+    .header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand svg{filter:drop-shadow(0 6px 22px rgba(96,165,250,.35))}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{text-decoration:none;opacity:.92}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3a58;border-radius:999px;padding:10px 16px;background:#0b1220;text-decoration:none}
+    .btn:hover{border-color:#3a4b6e}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#06101b;border:none}
+    .chip{border:1px solid #2a3a58;border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted)}
+    /* Hero */
+    .hero{position:relative;border-bottom:1px solid var(--line)}
+    .hero .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:52px 0}
+    .hero h1{font-size:clamp(28px,4.2vw,56px);line-height:1.08;margin:.1em 0}
+    .hero p{color:var(--lead);margin:10px 0 18px}
+    .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .hero-media{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .hero-media img{display:block;width:100%;height:100%;object-fit:cover}
+    /* Sections */
+    .section{padding:76px 0;border-bottom:1px solid var(--line)}
+    .section h2{font-size:clamp(22px,3.4vw,36px);margin:0 0 10px}
+    .lead{color:var(--lead)}
+    /* Products */
+    .filters{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 22px}
+    .filters select,.filters input{background:#0b1220;color:var(--text);border:1px solid #2a3a58;border-radius:12px;padding:10px 12px;min-width:160px}
+    .grid{display:grid;grid-template-columns:repeat( auto-fit, minmax(270px,1fr) );gap:20px}
+    .card{background:#0b1220;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .card .img{aspect-ratio:4/3;background:#0f172a}
+    .card .img img{width:100%;height:100%;object-fit:cover;display:block}
+    .card .body{padding:14px 16px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    .actions{display:flex;gap:12px;margin-top:10px}
+    /* Comparison */
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .table th,.table td{border-top:1px solid var(--line);border-right:1px solid var(--line);padding:12px 10px}
+    .table th{background:#0b1220;color:#cbd5e1;text-align:left}
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .gallery .g{grid-column:span 4;background:#0f172a;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .gallery .g img{width:100%;height:100%;object-fit:cover;display:block}
+    @media (max-width:900px){.hero .inner{grid-template-columns:1fr}.gallery .g{grid-column:span 6}}
+    @media (max-width:600px){.gallery .g{grid-column:span 12}}
+    /* Accordion */
+    .acc{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .acc details{border-top:1px solid var(--line)}
+    .acc details:first-child{border-top:none}
+    .acc summary{cursor:pointer;padding:14px 16px;background:#0b1220}
+    .acc .answer{padding:0 16px 16px;color:var(--lead)}
+    /* Footer */
+    .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+    .footer{padding:36px 0;color:#94a3b8}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container wrap">
+      <a class="brand" href="#" aria-label="Inicio">
+        <svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#1f2937"/><path d="M12 46 L32 16 L52 46 Z" fill="#60a5fa"/></svg>
+        <strong style="font-size:20px">Macael Piedra</strong>
+      </a>
+      <nav class="nav">
+        <a href="#productos" data-i18n="nav_productos">Productos</a>
+        <a href="#comparativa" data-i18n="nav_comp">Comparativa</a>
+        <a href="#proyectos" data-i18n="nav_proj">Proyectos</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#contacto" class="btn" data-i18n="nav_cta">Contacto</a>
+        <button id="lang" class="btn" aria-label="Cambiar idioma">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container inner">
+      <div>
+        <h1 data-i18n="h1">Piedra natural de Macael para arquitectura y paisajismo</h1>
+        <p class="lead" data-i18n="h1p">Alero (piedra irregular) <strong>Azul</strong> y <strong>Plata</strong>, y <strong>canto rodado de mármol blanco</strong>. Selección en origen, logística nacional y soporte técnico.</p>
+        <div class="hero-badges">
+          <span class="chip" data-i18n="chip1">Origen Macael (Almería)</span>
+          <span class="chip" data-i18n="chip2">Granulometrías calibradas</span>
+          <span class="chip" data-i18n="chip3">Baja absorción de agua</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#productos" data-i18n="cta1">Ver catálogo</a>
+          <a class="btn" href="#contacto" data-i18n="cta2">Solicitar muestra</a>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Textura de mármol">
+        <img loading="lazy" alt="Textura de mármol azul y plata" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2937'/%3E%3Cstop offset='1' stop-color='%230b1220'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23g)'/%3E%3Cpath d='M0,600 C200,520 360,680 600,620 C860,550 980,650 1200,600 L1200,800 L0,800 Z' fill='%2338bdf8' opacity='.28'/%3E%3Cpath d='M0,540 C220,520 360,560 600,520 C860,470 980,580 1200,520 L1200,800 L0,800 Z' fill='%23a3a3a3' opacity='.18'/%3E%3C/svg%3E"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="section">
+    <div class="container">
+      <h2 data-i18n="prod_h2">Productos</h2>
+      <p class="lead" data-i18n="prod_p">Explora por tipo, color y uso. Haz clic para ver detalles, tamaños y ficha técnica.</p>
+
+      <div class="filters">
+        <label><span data-i18n="f_tipo">Tipo</span><br>
+          <select id="tipo"><option value="" data-i18n="f_todos">Todos</option><option>Irregular</option><option>Pebbles</option></select>
+        </label>
+        <label><span data-i18n="f_color">Color</span><br>
+          <select id="color"><option value="" data-i18n="f_todos2">Todos</option><option>Azul</option><option>Plata</option><option>Blanco</option></select>
+        </label>
+        <label><span data-i18n="f_uso">Uso</span><br>
+          <select id="uso"><option value="" data-i18n="f_todos3">Todos</option><option data-i18n="u_rev">Revestimiento</option><option data-i18n="u_pais">Paisajismo</option><option data-i18n="u_dec">Decoración</option><option data-i18n="u_dren">Drenaje</option></select>
+        </label>
+        <label><span data-i18n="f_buscar">Buscar</span><br>
+          <input id="buscar" placeholder="Azul, fachada, 20-40..." />
+        </label>
+      </div>
+
+      <div id="grid" class="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Comparativa técnica -->
+  <section id="comparativa" class="section">
+    <div class="container">
+      <h2 data-i18n="comp_h2">Comparativa técnica</h2>
+      <p class="lead" data-i18n="comp_p">Valores orientativos. Para proyecto ejecutivo solicita fichas y ensayos actualizados.</p>
+      <div style="overflow:auto;border-radius:12px">
+        <table class="table">
+          <thead><tr>
+            <th data-i18n="comp_mat">Material</th>
+            <th data-i18n="comp_abs">Absorción agua (%)</th>
+            <th data-i18n="comp_comp">Compresión (MPa)</th>
+            <th data-i18n="comp_res">Resistencia heladas</th>
+            <th data-i18n="comp_uso">Usos recomendados</th>
+          </tr></thead>
+          <tbody>
+            <tr><td data-i18n="m_azul">Alero Azul</td><td>0.25</td><td>110</td><td data-i18n="ok">Apta</td><td data-i18n="uso_azul">Fachadas, muretes, pavimentos ligeros</td></tr>
+            <tr><td data-i18n="m_plata">Alero Plata</td><td>0.28</td><td>105</td><td data-i18n="ok">Apta</td><td data-i18n="uso_plata">Revestimiento, paisajismo, jardines</td></tr>
+            <tr><td data-i18n="m_peb">Canto rodado Mármol Blanco</td><td>0.15</td><td>>120</td><td data-i18n="ok">Apta</td><td data-i18n="uso_peb">Xeropaisajismo, drenaje, decoración</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contacto" data-i18n="comp_cta">Pedir fichas y muestras</a>
+        <span class="chip" data-i18n="comp_note">Origen certificado · Macael</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos / Galería -->
+  <section id="proyectos" class="section">
+    <div class="container">
+      <h2 data-i18n="proj_h2">Proyectos</h2>
+      <p class="lead" data-i18n="proj_p">Aplicaciones en vivienda, hotelería y espacios exteriores. Sustituye las imágenes por tus fotos.</p>
+      <div class="gallery" id="gal">
+        <div class="g"><img alt="Fachada Alero Azul" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3EFachada Alero Azul%3C/text%3E%3C/svg%3E"></div>
+        <div class="g"><img alt="Murete Alero Plata" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23112233'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3EMurete Alero Plata%3C/text%3E%3C/svg%3E"></div>
+        <div class="g"><img alt="Jardín con cantos blancos" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%231a2637'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3EJard%C3%ADn con cantos blancos%3C/text%3E%3C/svg%3E"></div>
+        <div class="g"><img alt="Sendero decorativo" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%230b1220'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3ESendero decorativo%3C/text%3E%3C/svg%3E"></div>
+        <div class="g"><img alt="Rotonda con cantos blancos" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%2318243a'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3ERotonda con cantos blancos%3C/text%3E%3C/svg%3E"></div>
+        <div class="g"><img alt="Patio piedra Plata" loading="lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%2310253a'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='24' text-anchor='middle' font-family='Arial'%3EPatio piedra Plata%3C/text%3E%3C/svg%3E"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 data-i18n="faq_h2">Preguntas frecuentes</h2>
+      <div class="acc">
+        <details open><summary data-i18n="q1">¿Suministráis a toda España?</summary><div class="answer" data-i18n="a1">Sí, entregamos en península y Baleares con transporte paletizado o a granel, según volumen.</div></details>
+        <details><summary data-i18n="q2">¿Podéis enviar muestras?</summary><div class="answer" data-i18n="a2">Por supuesto. Indícanos dirección y material/tamaño. Envío habitual 24–72 h.</div></details>
+        <details><summary data-i18n="q3">¿Los tamaños son exactos?</summary><div class="answer" data-i18n="a3">Trabajamos rangos granulométricos (p. ej. 20–40 mm). Cribado para reducir finos y desvíos.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2 data-i18n="c_h2">Contacto y muestras</h2>
+      <p class="lead" data-i18n="c_p">Cuéntanos tu proyecto y te asesoramos en 24–48 h. Precios bajo consulta directa.</p>
+      <form id="form" action="https://formspree.io/f/your-id" method="POST" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px">
+        <input name="nombre" placeholder="Nombre" required style="padding:12px;border:1px solid #334155;border-radius:12px;background:#0b1220;color:#e5e7eb">
+        <input name="email" placeholder="Email" type="email" required style="padding:12px;border:1px solid #334155;border-radius:12px;background:#0b1220;color:#e5e7eb">
+        <input name="telefono" placeholder="Teléfono" style="padding:12px;border:1px solid #334155;border-radius:12px;background:#0b1220;color:#e5e7eb">
+        <select name="material" style="padding:12px;border:1px solid #334155;border-radius:12px;background:#0b1220;color:#e5e7eb">
+          <option value="Alero Azul">Alero Azul</option>
+          <option value="Alero Plata">Alero Plata</option>
+          <option value="Canto rodado Blanco">Canto rodado Blanco</option>
+        </select>
+        <textarea name="mensaje" rows="4" placeholder="Cuéntanos usos, medidas y destino" style="grid-column:1/-1;padding:12px;border:1px solid #334155;border-radius:12px;background:#0b1220;color:#e5e7eb"></textarea>
+        <div class="cta" style="grid-column:1/-1">
+          <button class="btn btn-primary" type="submit" data-i18n="c_btn">Enviar consulta</button>
+          <a class="btn" href="https://wa.me/34123456789" target="_blank" rel="noopener" data-i18n="c_wsp">WhatsApp</a>
+          <span class="chip">Macael, Almería</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> Macael Piedra · <span data-i18n="foot">Todos los derechos reservados</span></small>
+    </div>
+  </footer>
+
+  <!-- Modal producto -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar" id="modal-close">×</button>
+      <div class="img"><img id="m-img" alt=""></div>
+      <div class="modal-body">
+        <h3 id="m-title"></h3>
+        <p class="lead" id="m-sub"></p>
+        <div class="meta" style="margin:8px 0 12px">
+          <span class="chip" id="m-tipo"></span>
+          <span class="chip" id="m-color"></span>
+          <span class="chip" id="m-tamanos"></span>
+        </div>
+        <p id="m-uso"></p>
+        <div class="actions">
+          <a class="btn" id="m-ficha" href="#" target="_blank" rel="noopener">Ficha técnica</a>
+          <a class="btn btn-primary" href="#contacto" data-i18n="m_cta">Solicitar muestra</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // I18N
+  const T = { es:{
+      nav_productos:"Productos", nav_comp:"Comparativa", nav_proj:"Proyectos", nav_faq:"FAQ", nav_cta:"Contacto",
+      h1:"Piedra natural de Macael para arquitectura y paisajismo",
+      h1p:"Alero (piedra irregular) <strong>Azul</strong> y <strong>Plata</strong>, y <strong>canto rodado de mármol blanco</strong>. Selección en origen, logística nacional y soporte técnico.",
+      chip1:"Origen Macael (Almería)", chip2:"Granulometrías calibradas", chip3:"Baja absorción de agua",
+      cta1:"Ver catálogo", cta2:"Solicitar muestra",
+      prod_h2:"Productos", prod_p:"Explora por tipo, color y uso. Haz clic para ver detalles, tamaños y ficha técnica.",
+      f_tipo:"Tipo", f_color:"Color", f_uso:"Uso", f_buscar:"Buscar", f_todos:"Todos", f_todos2:"Todos", f_todos3:"Todos", u_rev:"Revestimiento", u_pais:"Paisajismo", u_dec:"Decoración", u_dren:"Drenaje",
+      comp_h2:"Comparativa técnica", comp_p:"Valores orientativos. Para proyecto ejecutivo solicita fichas y ensayos actualizados.", comp_mat:"Material", comp_abs:"Absorción agua (%)", comp_comp:"Compresión (MPa)", comp_res:"Resistencia heladas", comp_uso:"Usos recomendados", ok:"Apta", uso_azul:"Fachadas, muretes, pavimentos ligeros", uso_plata:"Revestimiento, paisajismo, jardines", uso_peb:"Xeropaisajismo, drenaje, decoración", comp_cta:"Pedir fichas y muestras", comp_note:"Origen certificado · Macael",
+      proj_h2:"Proyectos", proj_p:"Aplicaciones en vivienda, hotelería y exteriores.",
+      faq_h2:"Preguntas frecuentes", q1:"¿Suministráis a toda España?", a1:"Sí, península y Baleares, paletizado o a granel.", q2:"¿Podéis enviar muestras?", a2:"Sí, 24–72 h.", q3:"¿Los tamaños son exactos?", a3:"Rangos (p. ej. 20–40 mm), cribado y calibración.",
+      c_h2:"Contacto y muestras", c_p:"Te asesoramos en 24–48 h. Precios bajo consulta directa.", c_btn:"Enviar consulta", c_wsp:"WhatsApp",
+      m_cta:"Solicitar muestra", foot:"Todos los derechos reservados",
+      title:"Macael Piedra — Alero Azul y Plata · Canto Rodado de Mármol Blanco",
+      meta_desc:"Piedra irregular (alero) Azul y Plata y canto rodado de mármol blanco. Catálogo, proyectos, comparativa técnica y contacto. Origen Macael (Almería)."
+    }, en:{
+      nav_productos:"Products", nav_comp:"Comparison", nav_proj:"Projects", nav_faq:"FAQ", nav_cta:"Contact",
+      h1:"Natural stone from Macael for architecture & landscaping",
+      h1p:"Irregular stone (overhangs) in <strong>Blue</strong> and <strong>Silver</strong>, plus <strong>white marble pebbles</strong>. Source selection, nationwide logistics and technical support.",
+      chip1:"Macael origin (Almería)", chip2:"Calibrated grading", chip3:"Low water absorption",
+      cta1:"See catalogue", cta2:"Request sample",
+      prod_h2:"Products", prod_p:"Explore by type, colour and use. Click for details, sizes and data sheet.",
+      f_tipo:"Type", f_color:"Colour", f_uso:"Use", f_buscar:"Search", f_todos:"All", f_todos2:"All", f_todos3:"All", u_rev:"Cladding", u_pais:"Landscaping", u_dec:"Decoration", u_dren:"Drainage",
+      comp_h2:"Technical comparison", comp_p:"Indicative values. For construction docs request up‑to‑date tests.", comp_mat:"Material", comp_abs:"Water absorption (%)", comp_comp:"Compression (MPa)", comp_res:"Frost resistance", comp_uso:"Recommended uses", ok:"Suitable", uso_azul:"Facades, garden walls, light paving", uso_plata:"Cladding, landscaping, gardens", uso_peb:"Xeriscaping, drainage, decoration", comp_cta:"Request data sheets & samples", comp_note:"Certified origin · Macael",
+      proj_h2:"Projects", proj_p:"Applications for housing, hospitality and outdoor spaces.",
+      faq_h2:"Frequently asked questions", q1:"Do you ship across Spain?", a1:"Yes: mainland & Balearic Islands.", q2:"Can you send samples?", a2:"Yes, 24–72 h.", q3:"Are sizes exact?", a3:"Grading ranges (e.g. 20–40 mm).",
+      c_h2:"Contact & samples", c_p:"We reply within 24–48 h. Pricing discussed directly.", c_btn:"Send enquiry", c_wsp:"WhatsApp",
+      m_cta:"Request sample", foot:"All rights reserved",
+      title:"Macael Piedra — Blue & Silver Irregular Stone · White Marble Pebbles",
+      meta_desc:"Irregular stone in Blue & Silver and white marble pebbles. Catalogue, projects, technical comparison and contact. Macael origin."
+    }};
+
+  // Data
+  const productos = [
+    {id:"alero-azul", nombre:"Alero Azul", nombre_en:"Blue Irregular Stone", tipo:"Irregular", tipo_en:"Irregular", color:"Azul", color_en:"Blue", tamanos:["30–60","60–100","100–200"], uso:["Revestimiento","Paisajismo"], uso_en:["Cladding","Landscaping"], img:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Crect width='1200' height='900' fill='%230f172a'/%3E%3Cpath d='M0,620 C260,560 360,700 620,640 C880,580 980,660 1200,620 L1200,900 L0,900 Z' fill='%2360a5fa' opacity='.35'/%3E%3C/svg%3E", ficha:"#"},
+    {id:"alero-plata", nombre:"Alero Plata", nombre_en:"Silver Irregular Stone", tipo:"Irregular", tipo_en:"Irregular", color:"Plata", color_en:"Silver", tamanos:["30–60","60–100","100–200"], uso:["Revestimiento","Decoración"], uso_en:["Cladding","Decoration"], img:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Crect width='1200' height='900' fill='%23111b2e'/%3E%3Cpath d='M0,620 C260,560 360,700 620,640 C880,580 980,660 1200,620 L1200,900 L0,900 Z' fill='%23a3a3a3' opacity='.35'/%3E%3C/svg%3E", ficha:"#"},
+    {id:"canto-blanco", nombre:"Canto rodado Mármol Blanco", nombre_en:"White Marble Pebbles", tipo:"Pebbles", tipo_en:"Pebbles", color:"Blanco", color_en:"White", tamanos:["10–20","20–40","40–60","60–100"], uso:["Paisajismo","Drenaje","Decoración"], uso_en:["Landscaping","Drainage","Decoration"], img:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'%3E%3Crect width='1200' height='900' fill='%230b1220'/%3E%3Cg fill='%23e5e7eb'%3E%3Ccircle cx='420' cy='520' r='120'/%3E%3Ccircle cx='720' cy='520' r='160'/%3E%3Ccircle cx='960' cy='560' r='110'/%3E%3C/g%3E%3C/svg%3E", ficha:"#"}
+  ];
+
+  // App helpers
+  let LANG = localStorage.getItem('lang') || 'es';
+  const $ = s=>document.querySelector(s); const $$ = s=>document.querySelectorAll(s);
+  const grid = $('#grid');
+
+  function i18n(){
+    const d=T[LANG]; document.title=d.title; const md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute('content', d.meta_desc);
+    $$('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n'); if(d[k]!==undefined) el.innerHTML=d[k];});
+    $('#lang').textContent = LANG==='es'?'EN':'ES';
+  }
+
+  function card(p){
+    const name = LANG==='es'? p.nombre : (p.nombre_en||p.nombre);
+    const tipo = LANG==='es'? p.tipo : (p.tipo_en||p.tipo);
+    const color = LANG==='es'? p.color : (p.color_en||p.color);
+    const tamanos = p.tamanos.join(' · ');
+    const el=document.createElement('article'); el.className='card';
+    el.innerHTML=`<div class="img"><img alt="${name}" loading="lazy" src="${p.img}"></div>
+      <div class="body"><h3>${name}</h3>
+        <div class="meta"><span class="chip">${tipo}</span><span class="chip">${color}</span><span class="chip">${tamanos} mm</span></div>
+        <div class="actions"><button class="btn" data-id="${p.id}" data-action="details">${LANG==='es'?'Detalles':'Details'}</button>
+        <a class="btn btn-primary" href="#contacto">${LANG==='es'?'Solicitar muestra':'Request sample'}</a></div></div>`;
+    el.querySelector('[data-action="details"]').addEventListener('click',()=>openModal(p));
+    return el;
+  }
+
+  function render(list){ grid.innerHTML=''; list.forEach(p=>grid.appendChild(card(p))); }
+
+  // Filters
+  const fTipo=$('#tipo'), fColor=$('#color'), fUso=$('#uso'), fBuscar=$('#buscar');
+  function applyFilters(){
+    const t=fTipo.value, c=fColor.value, u=fUso.value, q=fBuscar.value.toLowerCase().trim();
+    const out=productos.filter(p=> (!t||p.tipo===t||p.tipo_en===t) && (!c||p.color===c||p.color_en===c) && (!u||p.uso.includes(u)||p.uso_en.includes(u)) && (!q||JSON.stringify(p).toLowerCase().includes(q)) );
+    render(out);
+  }
+  [fTipo,fColor,fUso].forEach(x=>x.addEventListener('change',applyFilters)); fBuscar.addEventListener('input',applyFilters);
+
+  // Modal
+  const modal=$('#modal'); const mImg=$('#m-img'); const mTitle=$('#m-title'); const mSub=$('#m-sub'); const mTipo=$('#m-tipo'); const mColor=$('#m-color'); const mTamanos=$('#m-tamanos'); const mUso=$('#m-uso'); const mFicha=$('#m-ficha');
+  $('#modal-close').addEventListener('click',()=>modal.hidden=true); modal.addEventListener('click',e=>{ if(e.target===modal) modal.hidden=true; });
+  function openModal(p){
+    const name=LANG==='es'?p.nombre:(p.nombre_en||p.nombre); const tipo=LANG==='es'?p.tipo:(p.tipo_en||p.tipo); const color=LANG==='es'?p.color:(p.color_en||p.color); const usos=LANG==='es'?p.uso:(p.uso_en||p.uso);
+    mImg.src=p.img; mTitle.textContent=name; mSub.innerHTML = LANG==='es'? 'Origen <strong>Macael</strong>. Selección en cantera.' : 'Origin <strong>Macael</strong>. Quarry‑selected.';
+    mTipo.textContent=tipo; mColor.textContent=color; mTamanos.textContent=p.tamanos.join(' · ')+' mm'; mUso.textContent = (LANG==='es'?'Uso: ':'Use: ')+usos.join(', ');
+    mFicha.href=p.ficha; modal.hidden=false; mImg.focus();
+  }
+
+  // Boot
+  $('#lang').addEventListener('click',()=>{ LANG=LANG==='es'?'en':'es'; localStorage.setItem('lang',LANG); i18n(); render(productos); });
+  document.getElementById('year').textContent=new Date().getFullYear();
+  i18n(); render(productos);
+  </script>
+</body>
+</html>
